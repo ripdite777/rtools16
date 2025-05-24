@@ -1,73 +1,127 @@
-# Welcome to your Lovable project
 
-## Project info
+```md
+# 🎮 RTOOLS 16
 
-**URL**: https://lovable.dev/projects/43b6efc4-652d-469c-ace9-3fe7e5e088ad
+**The ultimate frontend toolkit for Counter-Strike 1.6 players.**  
+Create configs, scripts, rate settings and optimize your performance — all from one clean, modern web interface.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Live Modules
 
-**Use Lovable**
+| Tool              | Status  | Description |
+|------------------|---------|-------------|
+| 🔢 Rate Calculator | ✅ Active | Calculates `rate`, `cl_cmdrate`, `cl_updaterate`, `ex_interp` based on your internet speed. |
+| ⚙️ Config Builder | ✅ Active | Fully customizable `userconfig.cfg` builder with live preview. |
+| 🛒 AutoBuy Maker  | ✅ Active | Auto-buy script generator with bind support and clipboard export. |
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/43b6efc4-652d-469c-ace9-3fe7e5e088ad) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🔧 Under Maintenance
 
-**Use your preferred IDE**
+These modules are temporarily offline and will be reactivated in upcoming releases:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- 🎨 Crosshair Generator  
+- 📜 Server.cfg Generator  
+- 🧠 HLDS Autoexec/Start Builder  
+- 🧼 Config Fixer  
+- 📈 FPS Boost Generator  
+- 🎓 Training CFG Generator  
+- 🧷 Jumpthrow Bind Maker  
+- 📊 Net Graph Tool  
+- 🧠 Regedit Editor + CMD Optimizer  
+- 🧹 CMD Performance Cleaner
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+> 🛠 These sections will return soon with new UX, added clipboard support, dark mode compatibility, and expanded command/tooltips.
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🧩 Tech Stack
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- **Frontend:** HTML, TailwindCSS, JavaScript (Vanilla)
+- **Framework:** None – pure frontend SPA with modular tools
+- **Icons:** FontAwesome, Material Icons
+- **Storage:** `localStorage` for tool saves (optional)
+- **Clipboard:** Zero-dependency clipboard copy buttons
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+## 📁 Project Structure
+
 ```
 
-**Edit a file directly in GitHub**
+/
+├── index.html
+├── /tools
+│   ├── config-builder.html
+│   ├── rate-calculator.html
+│   ├── autobuy-maker.html
+│   └── \[other-tools].html (disabled)
+├── /assets
+│   ├── icons/
+│   ├── css/
+│   └── js/
+├── README.md
+└── LICENSE
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+````
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📌 Features (Live Tools)
 
-## What technologies are used for this project?
+### ✅ Rate Calculator
+- Input: Download & Upload speed
+- Output: Optimized `rate`, `cl_cmdrate`, `cl_updaterate`, `ex_interp`
+- Tooltip explanations
+- Clipboard export
 
-This project is built with:
+### ✅ Config Builder
+- Real-time config preview
+- Toggle/slider for sensitivity, volume, fps_max, gamma, voice, etc.
+- Clipboard export or download `.cfg`
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### ✅ AutoBuy Maker
+- Weapon picker by team (T/CT)
+- Assign key (F1–F12, KP_0–KP_9)
+- Output: `bind`-only script
+- Clipboard copy/reset
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/43b6efc4-652d-469c-ace9-3fe7e5e088ad) and click on Share -> Publish.
+## 🧪 How to Use
 
-## Can I connect a custom domain to my Lovable project?
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/your-username/cs16-master-tools.git
+   cd cs16-master-tools
+````
 
-Yes, you can!
+2. Open `index.html` in your browser.
+3. Use the live tools — no backend required.
+4. Other modules will become available once maintenance ends.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 📢 Upcoming Features
+
+* Regedit/CMD FPS & Network optimizers
+* Server.cfg & HLDS launch builders
+* Training presets & pro config templates
+* Shareable tool links
+* Theme selector (light/dark/system)
+* Mobile-first redesign
+
+---
+
+## 📄 License
+
+MIT © 2025 — [Ripdite](https://github.com/ripdite77)
+
+---
+
+## ❤️ Contribute
+
+PRs welcome! For issues or feature suggestions, use [Issues](https://github.com/ripdite777/rtools16/issues)
+
+```
