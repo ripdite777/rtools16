@@ -302,7 +302,7 @@ cl_cmdrate ${cmdRate[0]}
 ex_interp "${exInterp}"
 hpk_maxsize "${hpkMaxsize[0]}"
 cl_download_ingame 0
-cl_dlmax ${dlMax[0]}
+cl_dlmax "${dlMax}"
 cl_timeout ${clTimeout[0]}
 cl_pushlatency ${clPushlatency[0]}
 
@@ -373,7 +373,7 @@ echo "Config loaded successfully!"
     setCmdRate([105]);
     setExInterp('0.01');
     setHpkMaxsize([0.001]);
-    setDlMax([9999]);
+    setDlMax([96]);
     setAutobuyT('ak47 deagle vesthelm hegrenade flash');
     setAutobuyCT('m4a1 deagle vesthelm defuser hegrenade flash');
     setAutobuyKey('F1');
@@ -1110,11 +1110,11 @@ echo "Config loaded successfully!"
                     </div>
                     
                     <div className="space-y-2">
-                      <Label>Download Max: {dlMax[0]}</Label>
-                      <Slider
+                      <Label>DlMax: {dlMax[0]}</Label>
+                      <Input
                         value={dlMax}
                         onValueChange={setDlMax}
-                        max={9999}
+                        max={1024}
                         min={0}
                         step={100}
                         className="w-full"
