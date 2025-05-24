@@ -9,6 +9,7 @@ import BuyScript from "./pages/BuyScript";
 import ConfigBuilder from "./pages/ConfigBuilder";
 import RateCalculator from "./pages/RateCalculator";
 import NotFound from "./pages/NotFound";
+import Maintenance from "./pages/Maintenance";
 
 const queryClient = new QueryClient();
 
@@ -24,7 +25,8 @@ const App = () => (
           <Route path="/config-builder" element={<ConfigBuilder />} />
           <Route path="/rate-calculator" element={<RateCalculator />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          /*<Route path="*" element={<NotFound />} /> */
+          <Route path="*" element={<Maintenance />} /> 
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
