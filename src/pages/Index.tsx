@@ -23,7 +23,7 @@ const tools = [
   {
     id: 'crosshair',
     title: 'Crosshair Generator',
-    description: 'Customize your crosshair with live preview',
+    description: 'Customize your crosshair with live preview (UNDER CARE)',
     icon: Crosshair,
     path: '/crosshair'
   },
@@ -37,63 +37,63 @@ const tools = [
   {
     id: 'server-cfg',
     title: 'Server.cfg Generator',
-    description: 'Create server configuration files',
+    description: 'Create server configuration files (UNDER CARE)',
     icon: Server,
     path: '/server-cfg'
   },
   {
     id: 'fps-boost',
     title: 'FPS Boost Config',
-    description: 'Maximize your frame rate performance',
+    description: 'Maximize your frame rate performance (UNDER CARE)',
     icon: Zap,
     path: '/fps-boost'
   },
   {
     id: 'training-cfg',
     title: 'Training CFG',
-    description: 'Practice mode configuration generator',
+    description: 'Practice mode configuration generator (UNDER CARE)',
     icon: GraduationCap,
     path: '/training-cfg'
   },
   {
     id: 'jumpthrow',
     title: 'Jumpthrow Bind',
-    description: 'Perfect grenade throwing bind maker',
+    description: 'Perfect grenade throwing bind maker (UNDER CARE)',
     icon: MousePointer,
     path: '/jumpthrow'
   },
   {
     id: 'netgraph',
     title: 'Net Graph Tool',
-    description: 'Position your network information display',
+    description: 'Position your network information display (UNDER CARE)',
     icon: BarChart3,
     path: '/netgraph'
   },
   {
     id: 'config-cleaner',
     title: 'Config Cleaner',
-    description: 'Fix and optimize existing configurations',
+    description: 'Fix and optimize existing configurations (UNDER CARE)',
     icon: Wrench,
     path: '/config-cleaner'
   },
   {
     id: 'autoexec',
     title: 'HLDS Autoexec',
-    description: 'Server startup script generator',
+    description: 'Server startup script generator (UNDER CARE)',
     icon: Cpu,
     path: '/autoexec'
   },
   {
     id: 'regedit',
     title: 'Registry Editor',
-    description: 'Windows optimization for CS 1.6',
+    description: 'Windows optimization for CS 1.6 (UNDER CARE)',
     icon: Edit3,
     path: '/regedit'
   },
   {
     id: 'cmd-cleaner',
     title: 'CMD Cleaner',
-    description: 'System performance optimization commands',
+    description: 'System performance optimization commands (UNDER CARE)',
     icon: Command,
     path: '/cmd-cleaner'
   }
