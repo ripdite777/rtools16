@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Target, Settings, Crosshair, Wifi, Server, Cpu, Wrench, Zap, GraduationCap, MousePointer, BarChart3, Edit3, Command } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -99,7 +99,29 @@ const tools = [
   }
 ];
 
+const featuredTools = [
+  { id: 'buy-script', title: 'Buy Script Generator', path: '/buy-script' },
+  { id: 'config-builder', title: 'Config Builder', path: '/config-builder' },
+  { id: 'crosshair', title: 'Crosshair Generator', path: '/crosshair' },
+  { id: 'rate-calculator', title: 'Rate Calculator', path: '/rate-calculator' },
+  { id: 'fps-boost', title: 'FPS Boost Config', path: '/fps-boost' }
+];
+
 const Index = () => {
+  const [currentTool, setCurrentTool] = useState(featuredTools[0]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTool(prev => {
+        const currentIndex = featuredTools.findIndex(tool => tool.id === prev.id);
+        const nextIndex = (currentIndex + 1) % featuredTools.length;
+        return featuredTools[nextIndex];
+      });
+    }, 2500);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
       {/* Header */}
@@ -129,11 +151,11 @@ const Index = () => {
             everything you need to dominate the server.
           </p>
           <Link 
-            to="/buy-script"
-            className="inline-flex items-center px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded-lg transition-colors shadow-lg hover:shadow-xl"
+            to={currentTool.path}
+            className="inline-flex items-center px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl animate-fade-in"
           >
             <Target className="mr-2" size={20} />
-            Start with Buy Script Generator
+            Start with {currentTool.title}
           </Link>
         </div>
       </section>

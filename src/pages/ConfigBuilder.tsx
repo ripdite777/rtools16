@@ -65,6 +65,8 @@ const ConfigBuilder = () => {
   const [playerName, setPlayerName] = useState('Player');
   const [rightHand, setRightHand] = useState(true);
   const [clMinmodels, setClMinmodels] = useState(false);
+  const [clMinCt, setClMinCt] = useState([2]);
+  const [clMinT, setClMinT] = useState([1]);
   const [clAllowdownload, setClAllowdownload] = useState(false);
   
   // Audio settings
@@ -235,6 +237,9 @@ fps_max ${fpsMax[0]}
 cl_showfps ${showFps ? '1' : '0'}
 net_graph ${netGraph ? '1' : '0'}
 developer ${developer ? '1' : '0'}
+cl_minmodels ${clMinmodels ? '1' : '0'}
+${clMinmodels ? `cl_min_ct ${clMinCt[0]}` : ''}
+${clMinmodels ? `cl_min_t ${clMinT[0]}` : ''}
 
 // Graphics Settings
 cl_nosmooth "${clNosmooth ? '1' : '0'}"
@@ -373,6 +378,9 @@ echo "Config loaded successfully!"
     setAutobuyCT('m4a1 deagle vesthelm defuser hegrenade flash');
     setAutobuyKey('F1');
     setRebuyKey('F2');
+    setClMinmodels(false);
+    setClMinCt([2]);
+    setClMinT([1]);
     clearUpload();
     toast({
       title: "Reset!",
@@ -471,6 +479,49 @@ echo "Config loaded successfully!"
                       />
                       <Label htmlFor="developer">Developer Mode</Label>
                     </div>
+                    
+                    <div className="flex items-center space-x-2">
+                      <Switch
+                        id="min-models"
+                        checked={clMinmodels}
+                        onCheckedChange={setClMinmodels}
+                      />
+                      <Label htmlFor="min-models">Use Minimum Models</Label>
+                    </div>
+                    
+                    {clMinmodels && (
+                      <>
+                        <div className="space-y-2">
+                          <Label>CT Model (cl_min_ct): {clMinCt[0] === 2 ? 'GIGN' : clMinCt[0] === 4 ? 'GSG-9' : clMinCt[0] === 7 ? 'SAS' : 'SEAL'}</Label>
+                          <Slider
+                            value={clMinCt}
+                            onValueChange={setClMinCt}
+                            max={9}
+                            min={2}
+                            step={1}
+                            className="w-full"
+                          />
+                          <div className="text-xs text-gray-500">
+                            2: GIGN | 4: GSG-9 | 7: SAS | 9: SEAL
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <Label>T Model (cl_min_t): {clMinT[0] === 1 ? 'Elite' : clMinT[0] === 5 ? 'Guerilla' : clMinT[0] === 6 ? 'Arctic' : 'Phoenix'}</Label>
+                          <Slider
+                            value={clMinT}
+                            onValueChange={setClMinT}
+                            max={8}
+                            min={1}
+                            step={1}
+                            className="w-full"
+                          />
+                          <div className="text-xs text-gray-500">
+                            1: Elite | 5: Guerilla | 6: Arctic | 8: Phoenix
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </CardContent>
                 </Card>
               </TabsContent>
