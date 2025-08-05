@@ -4,7 +4,6 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
- base: '/rtools16/', // <-- burası repo adınla aynı olmalı!
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",

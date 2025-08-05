@@ -1111,10 +1111,10 @@ echo "Config loaded successfully!"
                     
                     <div className="space-y-2">
                       <Label>DlMax: {dlMax[0]}</Label>
-                      <Input
+                      <Slider
                         value={dlMax}
                         onValueChange={setDlMax}
-                        max={1024}
+                        max={9999}
                         min={0}
                         step={100}
                         className="w-full"
